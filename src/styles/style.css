@@ -8,6 +8,7 @@
 
 body{
     height: 100vh;
+    overflow: hidden;
 }
 nav {
     display: flex;
@@ -22,7 +23,7 @@ nav {
     display: grid;
     grid-template-columns: 240px auto;
 
-    height: calc(100vh - 40px);
+    height: 100%;
 }
 .sidebar {
     height: 100%;
@@ -71,4 +72,40 @@ nav {
     margin-bottom: 4px ;
     color: white;
     font-weight: 400;
+}
+
+#createDialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 160px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+
+}
+
+.content-createDialog{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+dialog input {
+    background-color: rgb(244, 244, 244);
+    margin-left: 20px;
+    height: 40px;
+    width: 400px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+
+}
+dialog button {
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
 }

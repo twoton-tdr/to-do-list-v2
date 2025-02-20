@@ -1,3 +1,6 @@
+import { forEach } from "neo-async";
+import { projectModule } from "../app";
+
 const content = document.querySelector(".content");
 
 const homeElements = (function (){
@@ -23,9 +26,36 @@ const homeElements = (function (){
     main.appendChild(mainHead);
     mainHead.innerHTML = "My Projects";
 
+    const cards = document.createElement("div");
+    cards.classList.add("cards");
+    main.appendChild(cards);
+
     function createNewProject(){
+        const createdialog = document.querySelector("#createDialog");
+        const confirmButtonCreate = document.querySelector("#confirm");
+        const projectNameInput = document.querySelector("#project-name");
+
         createButton.addEventListener("click",()=>{
-            console.log("clicked")
+            createdialog.showModal()
+        })
+        confirmButtonCreate.addEventListener("click",(e)=>{
+            // const projectName = projectNameInput.value;
+            projectModule.createProject(projectNameInput.value);
+            projectNameInput.value = "";
+            createdialog.close()
+            createNewProjectList();
+        })
+    }
+
+    function createNewProjectList(){
+        let listProjects = projectModule.getProjects();
+        cards.innerHTML = ""
+        Object.keys(listProjects).forEach((element)=>{
+            console.log(element)
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerText = element;
+            cards.appendChild(card)
         })
     }
 
