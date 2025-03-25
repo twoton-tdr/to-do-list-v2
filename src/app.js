@@ -10,7 +10,7 @@ const projectModule = (function() {
 
     projects = JSON.parse(localStorage.getItem("projects"));
 
-    const updateLocalStorage = function (projects){
+    const updateLocalStorage = function (){
         const temp = JSON.stringify(projects);
         localStorage.setItem("projects",temp);
     }
@@ -18,13 +18,13 @@ const projectModule = (function() {
     const createProject = function (newProject){
         //creating a new project(todo group)
         projects[newProject] = [];
-        updateLocalStorage(projects);
+        updateLocalStorage();
     }
 
     const removeProject = function (projectName){
         delete projects[projectName];
 
-        updateLocalStorage(projects);
+        updateLocalStorage();
 
     }
     function getProjects(){
@@ -42,6 +42,7 @@ const projectModule = (function() {
     function removeToDo(projectName,toDoName){
         const index = projects[projectName].findIndex(x => x.name === toDoName);
         projects[projectName].splice(index,1);
+        
     }
 
     function updateListInProject(projectName,list){
@@ -66,7 +67,7 @@ const projectModule = (function() {
         });
 
         list.setDesc(desc)
- 
+        updateLocalStorage()
     }
 
     function setDate(projectName,toDoName,date){
