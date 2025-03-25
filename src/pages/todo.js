@@ -14,14 +14,21 @@ const todoElements = (function(){
         content.appendChild(sideBar);
     
         const createButton = document.createElement("button");
-        const removeButton = document.createElement("button");
+        const homeButton = document.createElement("button");
         createButton.classList.add("create-project");
-        removeButton.classList.add("remove-project");
+        homeButton.classList.add("remove-project");
         createButton.innerText = "Create TO-DO";
-        removeButton.innerText = "Remove TO-DO"
+        homeButton.innerText = "Home";
+        sideBar.appendChild(homeButton);
         sideBar.appendChild(createButton);
-        sideBar.appendChild(removeButton);
+        
 
+        homeButton.addEventListener("click",goHome);
+        function goHome(){
+            console.log("clicked")
+            location.reload(); //just a muri vidhya to avoid fecking rewriting the whole home.js
+            //if it work dont touch it logic lol
+        }
         const classificationList = document.createElement('div');
         classificationList.classList.add('classification-list');
 

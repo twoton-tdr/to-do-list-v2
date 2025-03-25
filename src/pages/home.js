@@ -98,7 +98,7 @@ const homeElements = (function (){
             console.log(card);
             card.removeEventListener("click",clickEvent)
             card.addEventListener("click",handleProjectRemoval);
-            card.style.backgroundColor = "oklch(0.704 0.191 22.216)";
+            card.style.backgroundColor = "oklch(0.808 0.114 19.571)";
         })
         function handleProjectRemoval(e){
             console.log(e.target.innerHTML)

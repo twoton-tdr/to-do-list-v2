@@ -42,7 +42,7 @@ const projectModule = (function() {
     function removeToDo(projectName,toDoName){
         const index = projects[projectName].findIndex(x => x.name === toDoName);
         projects[projectName].splice(index,1);
-        
+        updateLocalStorage();
     }
 
     function updateListInProject(projectName,list){
@@ -50,8 +50,10 @@ const projectModule = (function() {
         list.map((element)=>{
             projects[projectName].push(element);
         })
+        updateLocalStorage();
     }
     function getListFromProject(projectName){
+        projects = getProjects();
         return projects[projectName];
     }
 
@@ -80,7 +82,8 @@ const projectModule = (function() {
                 event = element;
             }
         });
-        return event.dueDate = date;
+        event.dueDate = date;
+        updateLocalStorage();
     }
     function setPriority(projectName,toDoName,prior){
         let event;
@@ -90,7 +93,8 @@ const projectModule = (function() {
                 event = element;
             }
         });
-        return event.priority = prior;
+        event.priority = prior;
+        updateLocalStorage();
     }
 
     function statusChange(status,projectName,toDoName){
@@ -100,7 +104,8 @@ const projectModule = (function() {
                 event = element;
             }
         });
-        return event.status = status;
+        event.status = status;
+        updateLocalStorage();
     }
     return { createProject , getProjects, removeProject , pushToProject , updateListInProject , 
         setDesc , setDate , statusChange , getListFromProject , setPriority , removeToDo};
