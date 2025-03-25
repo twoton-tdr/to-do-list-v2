@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    height: 40px;
+    background-color: rgb(192, 192, 192);
+}
+.content {
+    display: grid;
+    grid-template-columns: 240px auto;
+
+    height: 100%;
+}
+.sidebar {
+    height: 100%;
+    position: sticky;
+}
+
+
+.sidebar{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.sidebar button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230);
+    padding: 40px;
+}
+.projects {
+    width: 100%;
+    background-color: rgb(251, 251, 251);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.card {
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    margin-bottom: 4px ;
+    color: white;
+    font-weight: 400;
+}
+
+dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 160px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+
+}
+
+.content-createDialog{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+dialog input {
+    background-color: rgb(244, 244, 244);
+    margin-left: 20px;
+    height: 40px;
+    width: 400px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+
+}
+dialog button {
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+#ToDoDialog {
+    height: 400px;
+}
+#ToDoDialog .input , #showEvent .input{
+    width: 480px;
+    display: grid;
+    grid-template-columns: 80px 400px;
+    align-items: center;
+}
+dialog textarea , dialog select{
+    width: 400px;
+    height: 80px;
+    background-color: rgb(244, 244, 244);
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+#ToDoDialog input , #showEvent input{
+    margin-left: 0;
+    padding: 10px;
+}
+.textareaInput{
+    display: grid !important;
+    align-items: start !important;
+}
+dialog select{
+    height: 40px;
+}
+
+.todo-card{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+}
+
+.todoname {
+justify-self: start;
+}
+
+.buttons {
+    display: flex;
+    gap: 40px;
+}
+
+
+#showEvent{
+    height: 440px;
+}
+
+#Completed {
+    width: 440px;
+}
+.buttons button{
+    width: 200px;
+}
+
+#Remove{
+    color: red;
+}
+
+#Confirm{
+    color: green;
+}
+
+.classification{
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+.classification-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
