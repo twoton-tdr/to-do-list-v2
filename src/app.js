@@ -20,6 +20,13 @@ const projectModule = (function() {
         projects[newProject] = [];
         updateLocalStorage(projects);
     }
+
+    const removeProject = function (projectName){
+        delete projects[projectName];
+
+        updateLocalStorage(projects);
+
+    }
     function getProjects(){
         projects = JSON.parse(localStorage.getItem("projects"));
         return projects;
@@ -30,7 +37,6 @@ const projectModule = (function() {
         const temp = new toDoList(toDoName);
         projects[projectName].push(temp);
         updateLocalStorage(projects)
-
     }
 
     function removeToDo(projectName,toDoName){
@@ -95,7 +101,7 @@ const projectModule = (function() {
         });
         return event.status = status;
     }
-    return { createProject , getProjects , pushToProject , updateListInProject , 
+    return { createProject , getProjects, removeProject , pushToProject , updateListInProject , 
         setDesc , setDate , statusChange , getListFromProject , setPriority , removeToDo};
 })();
 

@@ -31,7 +31,7 @@ const homeElements = (function (){
     main.appendChild(cards);
 
     function createNewProject(){
-        console.log("clicked")
+
         const createdialog = document.querySelector("#createDialog");
         const confirmButtonCreate = document.querySelector("#confirm");
         const projectNameInput = document.querySelector("#project-name");
@@ -53,7 +53,7 @@ const homeElements = (function (){
         let listProjects = projectModule.getProjects();
         cards.innerHTML = ""
         Object.keys(listProjects).forEach((element)=>{
-            console.log(element)
+            // console.log(element)
             const card = document.createElement("div");
             card.classList.add("card");
             card.innerText = element;
@@ -63,15 +63,15 @@ const homeElements = (function (){
         flag = !flag; 
     }
 
+    function clickEvent(e){
+        // todocreateToDo(e.target.innerHTML)
+        todoElements.createToDo(e.target.innerHTML)
 
+    }
     function cardClicked(status){
         
         const cards = document.querySelectorAll(".card");
-        function clickEvent(e){
-            // todocreateToDo(e.target.innerHTML)
-            todoElements.createToDo(e.target.innerHTML)
 
-        }
         if(status){
             cards.forEach((card)=>{
                 card.addEventListener("click",clickEvent)
@@ -90,7 +90,21 @@ const homeElements = (function (){
     
     removeButton.addEventListener("click",removeProject);
     function removeProject(){
-        console.log("clicked")
+        const projects = projectModule.getProjects();
+        const projectArray = Object.entries(projects);
+        
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            console.log(card);
+            card.removeEventListener("click",clickEvent)
+            card.addEventListener("click",handleProjectRemoval);
+            card.style.backgroundColor = "oklch(0.704 0.191 22.216)";
+        })
+        function handleProjectRemoval(e){
+            console.log(e.target.innerHTML)
+            projectModule.removeProject(e.target.innerHTML);
+            createNewProjectList();
+        }
     }
     return { createNewProject, createNewProjectList };
 })();

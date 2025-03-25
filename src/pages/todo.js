@@ -7,7 +7,7 @@ const content = document.querySelector(".content");
 const todoElements = (function(){
 
     function createToDo(projectName){
-        console.log(projectName)
+        
         content.innerHTML = "";
         const sideBar = document.createElement("div");
         sideBar.classList.add("sidebar");
@@ -78,7 +78,7 @@ const todoElements = (function(){
 
         
         function createCards(flag = true,listToDo = ""){
-            console.log(listToDo)
+            // console.log(listToDo)
             //to create the list of all elements
             if(flag){
                 //this runs by default 
@@ -123,8 +123,6 @@ const todoElements = (function(){
 
         function cardDialog(e,projectName){
             const eventEditor = document.querySelector("#showEvent");
-            console.log(e.target.innerHTML);
-            console.log(projectName);
 
             const toDoName = e.target.innerHTML;
             let listDetails;
@@ -133,7 +131,7 @@ const todoElements = (function(){
             listToDo.map((element)=>{
                 
                 if(element.name == toDoName){
-                    console.log(element)
+                    // console.log(element)
                     listDetails = element;
                 }
             })
@@ -209,7 +207,7 @@ const todoElements = (function(){
                 projectModule.setPriority(projectName,todoName.value,priority.value)
                 projectModule.statusChange("Ongoing",projectName,todoName.value)
                 toDoDialog.close();
-                console.log(projectModule.getListFromProject(projectName))
+                // console.log(projectModule.getListFromProject(projectName))
                 createCards()
                 confirmButton.removeEventListener("click",confirmClicked)
             }
