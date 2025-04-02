@@ -50,6 +50,7 @@ nav {
     flex-direction: column;
     background-color: rgb(230, 230, 230);
     padding: 40px;
+    overflow: scroll;
 }
 .projects {
     width: 100%;

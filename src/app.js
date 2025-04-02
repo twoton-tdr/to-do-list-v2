@@ -73,7 +73,14 @@ const projectModule = (function() {
     }
 
     function setDate(projectName,toDoName,date){
-        date = new Date(date);
+        if(date == ""){
+            date = new Date();
+            console.log(date)
+        }
+        else{
+            date = new Date(date);
+        }
+        
         date = format(date,"Pp");
         let event;
         //getting the the todo object from array

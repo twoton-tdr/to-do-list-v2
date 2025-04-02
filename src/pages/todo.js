@@ -210,6 +210,7 @@ const todoElements = (function(){
             function confirmClicked(){
                 projectModule.pushToProject(projectName,todoName.value);
                 projectModule.setDesc(projectName,todoName.value,description.value);
+        
                 projectModule.setDate(projectName,todoName.value,date.value);
                 projectModule.setPriority(projectName,todoName.value,priority.value)
                 projectModule.statusChange("Ongoing",projectName,todoName.value)
