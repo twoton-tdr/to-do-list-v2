@@ -167,6 +167,7 @@ const todoElements = (function(){
 
             function confirmChanges(){
                 projectModule.setDate(projectName,toDoName,DATE.value);
+                console.log(DESC.value);
                 projectModule.setDesc(projectName,toDoName,DESC.value);
                 projectModule.setPriority(projectName,toDoName,PRIORITY.value);
                 createCards();
@@ -208,6 +209,9 @@ const todoElements = (function(){
             confirmButton.addEventListener("click",confirmClicked)
 
             function confirmClicked(){
+                if(todoName.value == ""){
+                    return 0;
+                }
                 projectModule.pushToProject(projectName,todoName.value);
                 projectModule.setDesc(projectName,todoName.value,description.value);
         

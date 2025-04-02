@@ -65,10 +65,12 @@ const projectModule = (function() {
         projects[projectName].forEach(element => {
             if(element.name === toDoName){
                 list = element;
+                console.log(element)
+                element.desc = desc;
             }
         });
 
-        list.setDesc(desc)
+        
         updateLocalStorage()
     }
 
@@ -203,7 +205,7 @@ class toDoList {
         this.dueDate = dueDate;
         this.status = status;
     }
-    setDesc(desc){
+    setDes(desc){
         this.desc = desc;
     }
     
