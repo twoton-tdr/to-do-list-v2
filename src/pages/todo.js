@@ -219,6 +219,9 @@ const todoElements = (function(){
                 projectModule.setPriority(projectName,todoName.value,priority.value)
                 projectModule.statusChange("Ongoing",projectName,todoName.value)
                 toDoDialog.close();
+                todoName.value = "";
+                description.value = "";
+                date.value = "";
                 // console.log(projectModule.getListFromProject(projectName))
                 createCards()
                 confirmButton.removeEventListener("click",confirmClicked)
