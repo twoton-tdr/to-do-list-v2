@@ -1,11 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<script defer src="main.js"></script></head>
-<body>
-    
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><script defer="defer" src="main.js"></script></head><body><nav><header>TO DO LIST</header></nav><div class="content"></div><dialog id="createDialog"><div class="content-createDialog"><div class="input"><label for="Project-name">Project Name :</label> <input id="project-name" required></div><button type="submit" id="confirm">Confirm</button></div></dialog><dialog id="ToDoDialog"><div class="content-createDialog"><div class="input"><label for="todo-name">Name :</label> <input id="todo-name" required></div><div class="input textareaInput"><label for="desc">Desc&nbsp;&nbsp;:</label> <textarea name="desc" id="desc"></textarea></div><div class="input calendarInput"><label for="date">Due&nbsp;&nbsp;&nbsp;:</label> <input type="datetime-local" name="date" id="date" required></div><div class="input priority-input"><label for="priority">Priority</label> <select name="priority" id="priority"><option value="High">High</option><option value="Medium" selected="selected">Medium</option><option value="Low">Low</option></select></div><button type="submit" id="confirmToDo">Confirm</button></div></dialog><dialog id="showEvent"><div class="content-createDialog"><div class="input"><label for="todo-name">Name :</label> <input id="todo-name-event" disabled="disabled"></div><div class="input textareaInput"><label for="desc">Desc&nbsp;&nbsp;:</label> <textarea name="desc" id="desc-event"></textarea></div><div class="input calendarInput"><label for="date">Due&nbsp;&nbsp;&nbsp;:</label> <input type="datetime-local" name="date" id="date-event"></div><div class="input priority-input"><label for="priority">Priority</label> <select name="priority" id="priority-event"><option value="High">High</option><option value="Medium" selected="selected">Medium</option><option value="Low">Low</option></select></div><button type="submit" id="statusCompleted">Completed</button><div class="buttons"><button id="RemoveToDo">Remove</button> <button id="confirmUpdate">Confirm Changes</button></div></div></dialog></body></html>
