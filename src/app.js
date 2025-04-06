@@ -59,12 +59,12 @@ const projectModule = (function() {
 
     function setDesc(projectName,toDoName,desc){
         //function to set description of todolist
-        let list;
+        
 
         //searching for the specified to do
         projects[projectName].forEach(element => {
             if(element.name === toDoName){
-                list = element;
+                
                 console.log(element)
                 element.desc = desc;
             }
