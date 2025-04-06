@@ -1,8 +1,8 @@
-import './styles/style.css'
-import { homeElements } from "./pages/home";
+import './styles/style.css';
+import { homeElements } from './pages/home';
 
 
 
-homeElements.createNewProjectList()
+homeElements.createNewProjectList();
 homeElements.createNewProject();
 
