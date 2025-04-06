@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav>
-        <header>TO DO LIST</header>
-    </nav>
-    <div class="content">
-        <!-- <div class="sidebar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+            <header>TO DO LIST</header>
+        </nav>
+        <div class="content">
+            <!-- <div class="sidebar">
             <button>Create Project</button>
             <button>Delete Project</button>
             <div class="classification-list">
@@ -39,52 +39,54 @@
                 </div>
             </div>
         </div> -->
-    </div>
+        </div>
 
-
-        <dialog  id="createDialog">
+        <dialog id="createDialog">
             <div class="content-createDialog">
                 <div class="input">
                     <label for="Project-name">Project Name :</label>
-                    <input type="text" id="project-name" required>
+                    <input type="text" id="project-name" required />
                 </div>
                 <button type="submit" id="confirm">Confirm</button>
             </div>
         </dialog>
-    
 
-        <dialog  id="ToDoDialog" >
-            
+        <dialog id="ToDoDialog">
             <div class="content-createDialog">
                 <div class="input">
                     <label for="todo-name">Name :</label>
-                    <input type="text" id="todo-name" required>
+                    <input type="text" id="todo-name" required />
                 </div>
                 <div class="input textareaInput">
                     <label for="desc">Desc&nbsp;&nbsp;:</label>
-                    <textarea name="desc" id="desc" ></textarea>
+                    <textarea name="desc" id="desc"></textarea>
                 </div>
                 <div class="input calendarInput">
                     <label for="date">Due&nbsp;&nbsp;&nbsp;:</label>
-                    <input type="datetime-local" name="date" id="date" required>
+                    <input
+                        type="datetime-local"
+                        name="date"
+                        id="date"
+                        required
+                    />
                 </div>
                 <div class="input priority-input">
                     <label for="priority">Priority</label>
-                    <select name="priority" id="priority" >
-                        <option value="High" >High</option>
+                    <select name="priority" id="priority">
+                        <option value="High">High</option>
                         <option value="Medium" selected>Medium</option>
-                        <option value="Low" >Low</option>
+                        <option value="Low">Low</option>
                     </select>
                 </div>
                 <button type="submit" id="confirmToDo">Confirm</button>
             </div>
         </dialog>
-        
+
         <dialog id="showEvent">
             <div class="content-createDialog">
                 <div class="input">
                     <label for="todo-name">Name :</label>
-                    <input type="text" id="todo-name-event" disabled>
+                    <input type="text" id="todo-name-event" disabled />
                 </div>
                 <div class="input textareaInput">
                     <label for="desc">Desc&nbsp;&nbsp;:</label>
@@ -92,14 +94,14 @@
                 </div>
                 <div class="input calendarInput">
                     <label for="date">Due&nbsp;&nbsp;&nbsp;:</label>
-                    <input type="datetime-local" name="date" id="date-event" >
+                    <input type="datetime-local" name="date" id="date-event" />
                 </div>
                 <div class="input priority-input">
                     <label for="priority">Priority</label>
-                    <select name="priority" id="priority-event" >
-                        <option value="High" >High</option>
+                    <select name="priority" id="priority-event">
+                        <option value="High">High</option>
                         <option value="Medium" selected>Medium</option>
-                        <option value="Low" >Low</option>
+                        <option value="Low">Low</option>
                     </select>
                 </div>
                 <button type="submit" id="statusCompleted">Completed</button>
@@ -107,9 +109,7 @@
                     <button id="RemoveToDo">Remove</button>
                     <button id="confirmUpdate">Confirm Changes</button>
                 </div>
-                
             </div>
         </dialog>
-    
-</body>
+    </body>
 </html>

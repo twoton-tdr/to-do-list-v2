@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     border: none;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
+body {
     height: 100vh;
     overflow: hidden;
 }
@@ -30,22 +30,21 @@ nav {
     position: sticky;
 }
 
-
-.sidebar{
+.sidebar {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-.sidebar button{
+.sidebar button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     width: 200px;
     height: 40px;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     background-color: rgb(230, 230, 230);
@@ -70,22 +69,21 @@ nav {
     display: flex;
     align-items: center;
     background-color: gray;
-    margin-bottom: 4px ;
+    margin-bottom: 4px;
     color: white;
     font-weight: 400;
 }
 
-dialog{
+dialog {
     position: absolute;
     top: 50%;
     left: 50%;
     height: 160px;
     width: 600px;
     transform: translate(-50%, -50%);
-
 }
 
-.content-createDialog{
+.content-createDialog {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -102,7 +100,6 @@ dialog input {
     outline: none;
     padding: 20px;
     font-size: 16px;
-
 }
 dialog button {
     width: 400px;
@@ -113,13 +110,15 @@ dialog button {
 #ToDoDialog {
     height: 400px;
 }
-#ToDoDialog .input , #showEvent .input{
+#ToDoDialog .input,
+#showEvent .input {
     width: 480px;
     display: grid;
     grid-template-columns: 80px 400px;
     align-items: center;
 }
-dialog textarea , dialog select{
+dialog textarea,
+dialog select {
     width: 400px;
     height: 80px;
     background-color: rgb(244, 244, 244);
@@ -129,19 +128,20 @@ dialog textarea , dialog select{
     padding: 10px;
     font-size: 16px;
 }
-#ToDoDialog input , #showEvent input{
+#ToDoDialog input,
+#showEvent input {
     margin-left: 0;
     padding: 10px;
 }
-.textareaInput{
+.textareaInput {
     display: grid !important;
     align-items: start !important;
 }
-dialog select{
+dialog select {
     height: 40px;
 }
 
-.todo-card{
+.todo-card {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     align-content: center;
@@ -149,7 +149,7 @@ dialog select{
 }
 
 .todoname {
-justify-self: start;
+    justify-self: start;
 }
 
 .buttons {
@@ -157,31 +157,30 @@ justify-self: start;
     gap: 40px;
 }
 
-
-#showEvent{
+#showEvent {
     height: 440px;
 }
 
 #Completed {
     width: 440px;
 }
-.buttons button{
+.buttons button {
     width: 200px;
 }
 
-#Remove{
+#Remove {
     color: red;
 }
 
-#Confirm{
+#Confirm {
     color: green;
 }
 
-.classification{
+.classification {
     background-color: rgb(107, 107, 107);
     color: white;
 }
-.classification-list{
+.classification-list {
     display: flex;
     flex-direction: column;
     gap: 2px;
